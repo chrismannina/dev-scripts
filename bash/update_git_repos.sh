@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the root directory containing all project subdirectories
-PROJECTS_DIR="/home/machris/projects"
+PROJECTS_DIR="path/to/projects"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
