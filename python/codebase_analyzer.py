@@ -50,6 +50,12 @@ def list_files(startpath, exclude_dirs, exclude_types):
 def is_text_file(file_path, exclude_types):
     if any(file_path.endswith(ext) for ext in exclude_types):
         return False
+    
+    # Explicitly include common web development file types
+    web_dev_extensions = {'.js', '.jsx', '.ts', '.tsx', '.html', '.css', '.json', '.md', '.txt'}
+    if any(file_path.endswith(ext) for ext in web_dev_extensions):
+        return True
+    
     mime_type, _ = mimetypes.guess_type(file_path)
     return mime_type and mime_type.startswith('text')
 
